@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>My Weather App</title>
+</head>
+
+<body>
+
+    <main class="main-container">
+        <form class="search-form" id="search-form">
+            <div class="row">
+                <div class="col-9">
+
+                    <input type="search" placeholder="Enter a city..." autofocus="on" autocomplete="off" id="city-input"
+                        class="form-control" />
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="search" class="form-control btn-secondary shadow-sm" />
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-success w-100" id="current-loction-button">
+                        Current
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="location-and-date">
+            <h1 id="city">
+                New York</h1>
+            <div id="date"> </div>
+        </div>
+        <div class="current-temperature">
+            <div class="current-temperature__icon-container">
+                <img src="images/cloudy.png" class="current-temperature__icon" alt="">
+            </div>
+            <div class="current-temperature__content-container">
+                <div class="current-temperature__value" id="temperature">19</div>
+                <span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+                <div class="current-temperature__summary">Mostly cloudy</div>
+            </div>
+        </div>
+
+
+        <div class="current-stats">
+            <div>
+                <div class="current-stats__value">7%</div>
+                <div class="current-stats__label">Precip</div>
+                <div class="current-stats__value">77%</div>
+                <div class="current-stats__label">Humidity</div>
+            </div>
+            <div>
+                <div class="current-stats__value">16km/h</div>
+                <div class="current-stats__label">Wind</div>
+                <div class="current-stats__value">30%</div>
+                <div class="current-stats__label">Rain</div>
+            </div>
+
+        </div>
+
+        <div class="weather-by-hour">
+            <h2 class="week-weather-heading">This Week's weather</h2>
+            <div class="weather-by-hour__container">
+                <div class="week-weather-item">
+                    <div class="week-day-one">FRI</div>
+                    <img class="icons" src="images/cloudy.png" alt="Mostly sunny">
+                    <div>28°c</div>
+                </div>
+                <div class="week-weather-item">
+                    <div class="week-day-two">SAT</div>
+                    <img class="icons" src="images/rain-icon.png" alt="Mostly sunny">
+                    <div>29°c</div>
+                </div>
+                <div class="week-weather-item">
+                    <div class="week-day-three">SUN</div>
+                    <img class="icons" src="images/rain-icon.png" alt="Mostly sunny">
+                    <div>28°c</div>
+                </div>
+                <div class="week-weather-item">
+                    <div class="week-day-four">MON</div>
+                    <img class="icons" src="images/rain-icon.png" alt="Mostly sunny">
+                    <div>29°c</div>
+                </div>
+                <div class="week-weather-item">
+                    <div class="week-day-five">TUE</div>
+                    <img class="icons" src="images/rain-icon.png" alt="Sunny">
+                    <div>28°c</div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+
+
+        <script src="src/script.js"></script>
+    </main>
+
+</body>
+
+</html>
