@@ -1,159 +1,93 @@
 body {
-    margin: 12px;
-    font-size: 100%;
-    font-family: Arial, sans-serif;
-    color: rgb(181, 177, 177);
-    height: 100%;
-    background: rgb(247, 247, 243);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    font-family: arial, sans-serif;
 }
 
-.search-form {
+h1 {
+    color: #878787;
+    font-size: 24px;
+    font-weight: 100;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    color: rgb(135, 135, 135);
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 19px;
+}
+
+li:first-letter {
+    text-transform: capitalize;
+}
+
+.weather-app-wrapper {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.weather-app {
+    padding: 20px;
+    border: 1px solid #dadde1;
+    border-radius: 5px;
+}
+
+.overview {
     margin-bottom: 20px;
 }
 
-.main-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.icons {
+.weather-temperature img {
+    margin-right: 5px;
+    height: 64px;
     width: 64px;
 }
 
-@media screen and (min-width: 920px) {
-    .main-container {
-        width: 880px;
-        margin: 8px auto;
-        font-size: 1.1em;
-    }
+.weather-temperature strong {
+    color: rgb(33, 33, 33);
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 400;
 }
 
-/* location-and-date */
-.location-and-date {
-    width: 100%;
+.weather-temperature .units {
+    position: relative;
+    font-size: 16px;
+    top: -34px;
 }
 
-.location-and-date__location {
-    margin: 0;
-    font-size: 2em;
-    font-weight: 600;
+.weather-temperature .active {
+    color: rgb(33, 33, 33);
+    cursor: default;
 }
 
-.current-temperature__icon-container {
-    flex-grow: 1.25;
+.weather-temperature .active:hover {
+    text-decoration: none;
+}
+
+.weather-forecast {
+    margin-top: 20px;
     text-align: center;
+    color: #000;
 }
 
-.current-temperature__content-container {
-    flex-grow: 1;
-    text-align: center;
+.weather-forecast-date {
+    font-size: 16px;
+    opacity: 0.5;
 }
 
-.current-temperature__icon {
-    width: 10.5em;
+.weather-forecast-temperature-min {
+    opacity: 0.5;
 }
 
-.current-temperature__value {
-    font-size: 5.25em;
-    font-weight: 300;
+.weather-forecast-temperatures {
+    font-size: 13px;
 }
-
-.current-temperature__summary {
-    margin-top: -0.5em;
-    margin-left: -0.6em;
-    text-align: center;
-    font-size: 1.125em;
-}
-
-/* current-stats */
-.current-stats {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 1em;
-    width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-@media screen and (min-width: 700px) {
-    .current-stats {
-        margin-bottom: 1em;
-        padding-bottom: 0;
-        border-top: none;
-        border-bottom: none;
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
-    }
-}
-
-.current-stats__value {
-    margin-top: 1em;
-    font-size: 1.44em;
-}
-
-.current-stats__label {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-@media screen and (min-width: 700px) {
-
-    .current-temperature,
-    .current-stats {
-        width: 50%;
-    }
-}
-
-/* weather-by-hour */
-.weather-by-hour {
-    display: none;
-    width: 100%;
-}
-
-@media screen and (min-width: 700px) {
-    .weather-by-hour {
-        display: block;
-    }
-}
-
-.weather-by-hour__container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.week-weather-heading {
-    color: rgba(117, 114, 114, 0.8);
-    font-size: 1em;
-    font-weight: normal;
-}
-
-@media screen and (min-width: 768px) {
-    .weather-by-hour__heading {
-        font-size: 1.125em;
-    }
-}
-
-.week-weather-item {
-    padding: 0.8em 0;
-    width: 13%;
-    border-radius: 5px;
-    background-color: rgba(241, 232, 232, 0.878);
-    font-size: 1.125em;
-    text-align: center;
-}
-
-@media screen and (min-width: 880px) {
-    .weather-by-hour__item {
-        width: 6.05em;
-    }
-}
-
-.week-day-one,
-week-day-two,
-week-day-three,
-week-day-four,
-week-day-five {
-    margin-bottom: 0.5em;
-}
-
-/* next-5-days */
