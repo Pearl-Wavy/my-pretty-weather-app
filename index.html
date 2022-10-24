@@ -13,109 +13,52 @@
 </head>
 
 <body>
-
-    <main class="main-container">
-        <form class="search-form" id="search-form">
-            <div class="row">
-                <div class="col-9">
-
-                    <input type="search"
-                     placeholder="Enter a city..." 
-                     autofocus="on" 
-                     autocomplete="off" 
-                     id="city-input"
-                        class="form-control" />
+    <div class="container">
+        <div class="weather-app-wrapper">
+            <div class="weather-app">
+                <form id="search-form" class="mb-3">
+                    <div class="row">
+                        <div class="col-9">
+                            <input type="search" placeholder="Type a city.." class="form-control" id="city-input"
+                                autocomplete="off" />
+                        </div>
+                        <div class="col-3">
+                            <input type="submit" value="Search" class="btn btn-primary w-100" />
+                        </div>
+                    </div>
+                </form>
+                <div class="overview">
+                    <h1 id="city"></h1>
+                    <ul>
+                        <li>Last updated: <span id="date"></span></li>
+                        <li id="description"></li>
+                    </ul>
                 </div>
-                <div class="col-3">
-                    <input type="submit" value="search" class="form-control btn-secondary shadow-sm" />
+                <div class="row">
+                    <div class="col-6">
+                        <div class="clearfix weather-temperature">
+                            <img src="" alt="Clear" id="icon" class="float-left" />
+                            <div class="float-left">
+                                <strong id="temperature"></strong><span class="units"> °C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>Humidity: <span id="humidity"></span>%</li>
+                            <li>Wind: <span id="wind"></span> m/h</li>
+                        </ul>
+                    </div>
                 </div>
-                </div>
-            </form>
-        <div class="location-and-date">
-            <h1 id="city">
-                New York</h1>
-                <ul>
-                    <li>last updated:<span id="date"></span></li>
-                    <li id="description"></li>
-                </ul>
-        </div>
-        <div class="current-temperature">
-            <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
-                <div class="float-left">
-                    <strong id="temperature"></strong><span class="units"> °C</span>
-                </div>
-            
-            <div class="current-temperature__content-container">
-                <div class="current-temperature__value" id="temperature">19</div>
-                <span class="units">
-                    <a href="#" id="celsius-link">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a>
-                </span>
-                <div class="current-temperature__summary">Mostly cloudy</div>
+                <div class="weather-forecast" id="forecast"></div>
             </div>
+            <small>
+                <a href="https://github.com/wecodeschool/vanilla-weather-app" target="_blank">Open-source code</a>
+                by Pearl Jonathan
+            </small>
         </div>
-
-
-        <div class="current-stats">
-            <div>
-                <div class="current-stats__value">7%</div>
-                <div class="current-stats__label">Precip</div>
-                <div class="current-stats__value">77%</div>
-                <div class="current-stats__label">Humidity</div>
-            </div>
-            <div>
-                <div class="current-stats__value">16km/h</div>
-                <div class="current-stats__label">Wind</div>
-                <div class="current-stats__value">30%</div>
-                <div class="current-stats__label">Rain</div>
-            </div>
-
-        </div>
-
-        <div class="weather-by-hour">
-            <h2 class="week-weather-heading">This Week's weather</h2>
-            <div class="weather-by-hour__container">
-                <div class="week-weather-item">
-                    <div class="week-day-one">FRI</div>
-                    <img class="icons" src="images/cloudy.png" alt="Mostly sunny">
-                    <div>28°c</div>
-                </div>
-                <div class="week-weather-item">
-                    <div class="week-day-two">SAT</div>
-                    <img class="icons" src="images/rain-icon.png" alt="Mostly sunny">
-                    <div>29°c</div>
-                </div>
-                <div class="week-weather-item">
-                    <div class="week-day-three">SUN</div>
-                    <img class="icons" src="images/rain-icon.png" alt="Mostly sunny">
-                    <div>28°c</div>
-                </div>
-                <div class="week-weather-item">
-                    <div class="week-day-four">MON</div>
-                    <img class="icons" src="images/rain-icon.png" alt="Mostly sunny">
-                    <div>29°c</div>
-                </div>
-                <div class="week-weather-item">
-                    <div class="week-day-five">TUE</div>
-                    <img class="icons" src="images/rain-icon.png" alt="Sunny">
-                    <div>28°c</div>
-                </div>
-
-            </div>
-        </div>
-        </div>
-        </div>
-        <p>
-         <a
-           href="https://github.com/Pearl-Wavy/my-pretty-weather-app"
-            target="_blank">Open Source Code</a>
-            <span class="coder">Pearl Jonathan</span>
-         </p>
-
-        <script src="src/script.js"></script>
-    </main>
-
+    </div>
+    <script src="src/app.js"></script>
 </body>
 
 </html>
